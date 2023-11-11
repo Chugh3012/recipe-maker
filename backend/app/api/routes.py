@@ -1,5 +1,5 @@
 from backend.app.services.recipe_service import generate_recipe
-from flask import Blueprint, request
+from flask import Blueprint, jsonify, request
 
 api_bp = Blueprint('api', __name__)
 
@@ -13,4 +13,4 @@ def get_recipe():
     data = request.get_json()
     ingredients = data['ingredients']
     recipe = generate_recipe(ingredients)
-    return {"recipe": recipe}, 200
+    return {"response": recipe.to_dict()}, 200
