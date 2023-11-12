@@ -1,0 +1,29 @@
+<!-- frontend/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Maker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Maker</h1>
+    </header>
+    <main>
+        <form id="recipe-form">
+            <label for="ingredients">Enter ingredients (comma-separated):</label>
+            <input type="text" id="ingredients" placeholder="e.g., tomatoes, chicken, rice" required>
+            <button type="submit">Get Recipe</button>
+        </form>
+        <section id="recipe-result">
+            <h2 id="recipe-title"></h2>
+            <ul id="recipe-ingredients"></ul>
+            <p id="recipe-instructions"></p>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
