@@ -8,7 +8,7 @@ openai_client = OpenAI()
 def generate_recipe(ingredients) -> Recipe:
     try:
         response = openai_client.chat.completions.create(
-            model="gpt-3.5-turbo-1106",
+            model="gpt-4-1106-preview",
             response_format={ "type": "json_object" },
             messages=[
                 {"role": "system", "content": "You are a helpful assistant which generates recipes given ingredients in JSON format. It should contain recipe_name, servings, ingredients and instructions. Make sure there is no nested json inside ingredients."},
